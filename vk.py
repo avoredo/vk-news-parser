@@ -45,13 +45,11 @@ def main():
         print(posts)
         get_data(posts_count, posts)
     else:
-        print('Больше 200')
         req_times = posts_count // 200
         last_req = posts_count % 200
         for k in range(0, req_times):
             posts = vk.newsfeed.search(q = request, count = 200, startfrom = next_from)
             next_from = posts['next_from']
-            print('оп')
             get_data(200, posts)
         posts = vk.newsfeed.search(q = request, count = last_req, startfrom = next_from)
         get_data(last_req, posts)
