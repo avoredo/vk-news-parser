@@ -14,7 +14,7 @@
 login = 'your_login'
 passwd = 'your_password'
 ```
-4. Для запуска выполните команду
+## Для запуска выполните команду
 ```
 python vk.py
 ```
